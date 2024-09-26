@@ -1,6 +1,5 @@
-import fetch from 'node-fetch';
-
 export default async function handler(req, res) {
+  const fetch = (await import('node-fetch')).default;  // Dynamic import for node-fetch
   const today = new Date().toISOString().slice(0, 10);  // Get today's date in YYYY-MM-DD format
   const jsonUrl = 'https://joshy.lol/websites.json';
 
