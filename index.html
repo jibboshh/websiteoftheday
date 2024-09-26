@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website of the Day</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .container { max-width: 600px; margin: 0 auto; padding: 20px; text-align: center; }
+    a { text-decoration: none; color: blue; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Website of the Day</h1>
+    <div id="website">
+      <!-- Data will be dynamically injected here -->
+    </div>
+  </div>
+
+  <script>
+    // Fetch today's website from the API
+    fetch('/api/today')
+      .then(response => response.json())
+      .then(data => {
+        const websiteDiv = document.getElementById('website');
+        if (data.url) {
+          websiteDiv.innerHTML = `<a href="${data.url}" target="_blank">${data.url}</a>`;
+        } else {
+          websiteDiv.innerHTML = `<p>${data.message}</p>`;
+        }
+      })
+      .catch(err => {
+        console.error('Error fetching website:', err);
+        document.getElementById('website').innerHTML = '<p>Sorry, there is no website for today!</p>';
+      });
+  </script>
+</body>
+</html>
