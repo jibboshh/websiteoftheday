@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Archive</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+    a { text-decoration: none; color: blue; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Website Archive</h1>
+    <div id="archive">
+      <!-- List of past websites will be injected here -->
+    </div>
+  </div>
+
+  <script>
+    fetch('/api/archive')
+      .then(response => response.json())
+      .then(data => {
+        const archiveDiv = document.getElementById('archive');
+        let content = '<ul>';
+        data.forEach(site => {
+          content += `<li>${site.date}: <a href="${site.url}" target="_blank">${site.url}</a></li>`;
+        });
+        content += '</ul>';
+        archiveDiv.innerHTML = content;
+      })
+      .catch(err => {
+        console.error('Error fetching archive:', err);
+        document.getElementById('archive').innerHTML = '<p>Failed to load archive.</p>';
+      });
+  </script>
+</body>
+</html>
