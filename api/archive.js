@@ -1,7 +1,6 @@
-import fetch from 'node-fetch';
-
 export default async function handler(req, res) {
-  const jsonUrl = 'https://joshy.lol/websites.json';
+  const fetch = (await import('node-fetch')).default;  // Dynamic import for node-fetch
+  const jsonUrl = 'https://wotd.joshy.lol/websites.json';  // Updated URL
 
   try {
     // Fetch the JSON file from the URL
