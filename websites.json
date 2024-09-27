@@ -1,42 +1,52 @@
 [
   {
     "date": "2024-09-27",
-    "url": "https://google.com"
+    "url": "https://google.com",
+    "description": "Google was launched today! - The world's most popular search engine."
   },
   {
     "date": "2024-09-28",
-    "url": "https://slither.io/"
+    "url": "https://slither.io/",
+    "description": "A fun multiplayer snake game."
   },
   {
     "date": "2024-09-29",
-    "url": "https://agar.io/"
+    "url": "https://agar.io/",
+    "description": "Grow your cell by eating others in this online game."
   },
   {
     "date": "2024-09-30",
-    "url": "https://littlealchemy.com/"
+    "url": "https://littlealchemy.com/",
+    "description": "Combine elements to create new items."
   },
   {
     "date": "2024-10-01",
-    "url": "https://2048game.com/"
+    "url": "https://2048game.com/",
+    "description": "Slide tiles to combine them and reach 2048."
   },
   {
     "date": "2024-10-02",
-    "url": "https://www.cuttherope.net/"
+    "url": "https://www.cuttherope.net/",
+    "description": "Help Om Nom eat candy in this physics-based game."
   },
   {
     "date": "2024-10-03",
-    "url": "https://geoguessr.com/"
+    "url": "https://geoguessr.com/",
+    "description": "Guess locations from around the world using Google Street View."
   },
   {
     "date": "2024-10-04",
-    "url": "https://www.mysingingmonsters.com/"
+    "url": "https://www.mysingingmonsters.com/",
+    "description": "Create and breed your own musical monsters."
   },
   {
     "date": "2024-10-05",
-    "url": "https://www.bonkl.io/"
+    "url": "https://www.bonkl.io/",
+    "description": "An entertaining social game where you can prank friends."
   },
   {
     "date": "2024-10-06",
-    "url": "https://garticphone.com/"
+    "url": "https://garticphone.com/",
+    "description": "A fun drawing and guessing game to play with friends."
   }
 ]
