@@ -8,6 +8,7 @@
     body { font-family: Arial, sans-serif; }
     .container { max-width: 600px; margin: 0 auto; padding: 20px; text-align: center; }
     a { text-decoration: none; color: blue; }
+    .description { margin-top: 10px; font-style: italic; }
   </style>
 </head>
 <body>
@@ -25,7 +26,10 @@
       .then(data => {
         const websiteDiv = document.getElementById('website');
         if (data.url) {
-          websiteDiv.innerHTML = `<a href="${data.url}" target="_blank">${data.url}</a>`;
+          websiteDiv.innerHTML = `
+            <a href="${data.url}" target="_blank">${data.url}</a>
+            <div class="description">${data.description}</div>
+          `;
         } else {
           websiteDiv.innerHTML = `<p>${data.message}</p>`;
         }
